@@ -1,5 +1,7 @@
 # Presidio on Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/presidio-pii?referralCode=ZqgrJ0)
+
 Deploy Presidio 2.2.364 analyzer and anonymizer services behind generated HTTP Basic authentication.
 
 The Deploy on Railway button is added after the published route is verified.

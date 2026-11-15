@@ -4,13 +4,11 @@
 
 Deploy Presidio 2.2.366 analyzer and anonymizer services behind generated HTTP Basic authentication.
 
-The Deploy on Railway button is added after the published route is verified.
-
 ## What this deploys
 
 - Private Presidio Analyzer `2.2.366`, pinned to the maintained GHCR Linux/AMD64 image digest
 - Private Presidio Anonymizer `2.2.366`, pinned by digest
-- Public Caddy `2.10.2-alpine` proxy with generated HTTP Basic credentials
+- Public Caddy `2.11.9-alpine` proxy with generated HTTP Basic credentials
 - Upstream-backed health checks and a 1 MB text request limit
 
 ## Usage

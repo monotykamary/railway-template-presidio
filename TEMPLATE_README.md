@@ -2,7 +2,7 @@
 
 ## About Hosting Presidio
 
-Presidio detects personally identifiable information in text and applies configurable anonymization operators. This template deploys stable version 2.2.364 with analyzer and anonymizer services kept private behind an authenticated proxy.
+Presidio detects personally identifiable information in text and applies configurable anonymization operators. This template deploys stable version 2.2.366 with analyzer and anonymizer services kept private behind an authenticated proxy.
 
 Retrieve `BASIC_AUTH_USER` and the generated `BASIC_AUTH_PASSWORD` from the proxy service before calling `/analyze` and `/anonymize`.
 
@@ -25,7 +25,7 @@ Retrieve `BASIC_AUTH_USER` and the generated `BASIC_AUTH_PASSWORD` from the prox
 
 Railway HTTPS routes to Caddy on port 8080. The proxy enforces generated HTTP Basic credentials, limits request bodies to 1 MB, and routes `/analyze` and `/anonymize` over Railway private DNS. `/healthz` verifies the analyzer; each private service also has its own `/health` deployment check.
 
-Presidio 2.2.364 can return HTTP 500 for some malformed or schema-invalid requests, so clients should validate payloads before submission. Presidio detection is not infallible. The included official image uses its default English setup; production deployments need domain-specific recognizers, models, thresholds, and test corpora.
+Presidio 2.2.366 can return HTTP 500 for some malformed or schema-invalid requests, so clients should validate payloads before submission. Presidio detection is not infallible. The included official image uses its default English setup; production deployments need domain-specific recognizers, models, thresholds, and test corpora.
 
 ## Why Deploy Presidio on Railway?
 

@@ -1,2 +1,2 @@
-FROM ghcr.io/data-privacy-stack/presidio-anonymizer:2.2.364@sha256:65a9f96cc7216274d66d88db50495150b1e0bfffc105c57f9293f60b0596a48a
+FROM ghcr.io/data-privacy-stack/presidio-anonymizer:2.2.366@sha256:b4d9ec900135c694b84353e03e1abd5127ccdfcd916d32db73002c28f0eaddc7
 EXPOSE 3000

@@ -2,14 +2,14 @@
 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/presidio-pii?referralCode=ZqgrJ0)
 
-Deploy Presidio 2.2.364 analyzer and anonymizer services behind generated HTTP Basic authentication.
+Deploy Presidio 2.2.366 analyzer and anonymizer services behind generated HTTP Basic authentication.
 
 The Deploy on Railway button is added after the published route is verified.
 
 ## What this deploys
 
-- Private Presidio Analyzer `2.2.364`, pinned to the maintained GHCR Linux/AMD64 image digest
-- Private Presidio Anonymizer `2.2.364`, pinned by digest
+- Private Presidio Analyzer `2.2.366`, pinned to the maintained GHCR Linux/AMD64 image digest
+- Private Presidio Anonymizer `2.2.366`, pinned by digest
 - Public Caddy `2.10.2-alpine` proxy with generated HTTP Basic credentials
 - Upstream-backed health checks and a 1 MB text request limit
 
@@ -30,7 +30,7 @@ Pass the analyzer results with the same text to `/anonymize` to replace, redact,
 
 ## Model and accuracy scope
 
-The official analyzer image provides its default English NLP setup. Presidio 2.2.364 can return HTTP 500 and write a traceback for some malformed or schema-invalid analyzer requests, so clients should validate JSON and required fields before submission. Presidio findings are probabilistic and pattern-based; false positives and false negatives are expected. Do not treat a successful response as proof that all sensitive data was detected. Add recognizers, models, languages, thresholds, and tests for your data domain.
+The official analyzer image provides its default English NLP setup. Presidio 2.2.366 can return HTTP 500 and write a traceback for some malformed or schema-invalid analyzer requests, so clients should validate JSON and required fields before submission. Presidio findings are probabilistic and pattern-based; false positives and false negatives are expected. Do not treat a successful response as proof that all sensitive data was detected. Add recognizers, models, languages, thresholds, and tests for your data domain.
 
 ## Security
 
@@ -49,9 +49,13 @@ BASE_URL=https://your-domain.example BASIC_AUTH_USER=presidio BASIC_AUTH_PASSWOR
 
 ## Upstream
 
-- Source: https://github.com/data-privacy-stack/presidio/tree/2.2.364
-- Release: https://github.com/data-privacy-stack/presidio/releases/tag/2.2.364
+- Source: https://github.com/data-privacy-stack/presidio/tree/2.2.366
+- Release: https://github.com/data-privacy-stack/presidio/releases/tag/2.2.366
 - Documentation: https://microsoft.github.io/presidio/
 - License: MIT
 
 This repository contains Railway adapters and documentation. Presidio remains copyright Data Privacy Stack contributors and is not affiliated with Railway.
+
+## Repeatable product validation
+
+`python3 scripts/smoke.py` reads `BASE_URL` and `SMOKE_PHASE` (`boot`, `upgrade`, or `redeploy`). Supply `BASIC_AUTH_USER` and `BASIC_AUTH_PASSWORD` through the environment. The check exercises the actual API workflow and rejects missing or incorrect credentials. The service is stateless; no database or application-volume persistence is claimed.

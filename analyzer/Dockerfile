@@ -1,2 +1,2 @@
-FROM ghcr.io/data-privacy-stack/presidio-analyzer:2.2.364@sha256:674328b4724b86bde064cf806f32b60a6fb25afe19aa39853e23c8d94d1c99e7
+FROM ghcr.io/data-privacy-stack/presidio-analyzer:2.2.366@sha256:036d2f9b3c274fb36497383acef8f2d5aea528a014801c2c3040fb067990c79c
 EXPOSE 3000

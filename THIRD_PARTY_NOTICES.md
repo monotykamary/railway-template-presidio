@@ -2,8 +2,8 @@
 
 ## Presidio
 
-- Version: 2.2.364
-- Source: https://github.com/data-privacy-stack/presidio/tree/2.2.364
+- Version: 2.2.366
+- Source: https://github.com/data-privacy-stack/presidio/tree/2.2.366
 - Copyright: Microsoft Corporation and Data Privacy Stack contributors
 - License: MIT
 
@@ -11,6 +11,6 @@
 
 ## Caddy
 
-- Version: 2.10.2
+- Version: 2.11.9
 - Source: https://github.com/caddyserver/caddy
 - License: Apache License 2.0
